@@ -1,5 +1,7 @@
 package org.openweathermap;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openweathermap.pages.HomePage;
@@ -15,7 +17,7 @@ public class HomeSanityTest extends BaseTestClass {
 	@Test
 	public void verifyHomePageRendering() throws IOException {
 		this.homePage = new HomePage(this.driver);
-		Assert.assertTrue(this.homePage.isLogoDisplayed());	
+		AssertJUnit.assertTrue(this.homePage.isLogoDisplayed());	
 	}
 
 }
