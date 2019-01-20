@@ -1,7 +1,6 @@
 package org.openweathermap.pages.master;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -18,8 +17,8 @@ public class MasterPage {
 		
 
 		FileInputStream ip = new FileInputStream("F:\\Java Class\\workspace\\OpenWeatherMap\\src\\com\\weatherMap\\OR\\Locators.properties");
-		prop = new Properties();
-		prop.load(ip);
+		this.prop = new Properties();
+		this.prop.load(ip);
 		
 	}
 	
@@ -32,18 +31,18 @@ public class MasterPage {
 	
 	protected void sendKeys(String xpathKeys, String userData)
 	{
-		this.driver.findElement(By.xpath(prop.getProperty(xpathKeys))).sendKeys(userData);
+		this.driver.findElement(By.xpath(this.prop.getProperty(xpathKeys))).sendKeys(userData);
 	}
 	
 	
 	protected boolean elementDisplayed(String xpathkeys)
 	{
-		return this.driver.findElement(By.xpath(prop.getProperty(xpathkeys))).isDisplayed();
+		return this.driver.findElement(By.xpath(this.prop.getProperty(xpathkeys))).isDisplayed();
 	}
 	
 	protected void click(String xpathkeys)
 	{
-		this.driver.findElement(By.xpath(prop.getProperty(xpathkeys))).click();
+		this.driver.findElement(By.xpath(this.prop.getProperty(xpathkeys))).click();
 	}
 	
 }
