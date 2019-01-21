@@ -24,7 +24,6 @@ public class HomeSanityTest extends BaseTestClass {
 		Assert.assertTrue(this.homePage.isCityTxtboxDisplayed());
 		Assert.assertTrue(this.homePage.isSearchDisplayed());
 		Assert.assertTrue(this.homePage.isWeatherDisplayed());
-		Assert.assertTrue(this.homePage.isWeatherChartDisplayed());
 	}
 
 }

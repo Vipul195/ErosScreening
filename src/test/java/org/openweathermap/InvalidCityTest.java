@@ -28,7 +28,6 @@ private HomePage homePage = null;
 		{
 			Assert.assertTrue(true, "City Not Found");
 		}
-		//Assert.assertFalse(this.homePage.isWeatherDisplayed());
 	}
 
 }

@@ -47,9 +47,6 @@ public class HomePage extends MasterPage {
 	public  boolean isWeatherDisplayed() {
 		return  this.elementDisplayed("Weather_Details");
 	}
-	public  boolean isWeatherChartDisplayed() {
-		return  this.elementDisplayed("Weather_Chart");
-	}
 	public Boolean enterCity(String cityName)
 	{
 		//cityname
