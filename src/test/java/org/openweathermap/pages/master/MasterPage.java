@@ -16,7 +16,7 @@ public class MasterPage {
 		this.driver = driver;
 		
 
-		FileInputStream ip = new FileInputStream("F:\\Java Class\\workspace\\ErosScreening-master\\src\\test\\resources\\home.locators.properties");
+		FileInputStream ip = new FileInputStream("F:\\Java Class\\Eros-ScreeningTest\\ErosScreening\\src\\test\\resources\\home.locators.properties");
 		this.prop = new Properties();
 		this.prop.load(ip);
 		
