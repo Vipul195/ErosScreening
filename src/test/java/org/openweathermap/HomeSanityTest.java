@@ -1,7 +1,5 @@
 package org.openweathermap;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openweathermap.pages.HomePage;

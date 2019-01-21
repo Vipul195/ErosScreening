@@ -1,7 +1,5 @@
 package org.openweathermap;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.util.List;
 
@@ -24,6 +22,7 @@ private HomePage homePage = null;
 		this.homePage = new HomePage(this.driver);
 		WebDriverWait wait1 = new WebDriverWait(driver, 30);
 		WebElement search = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Your city name']")));
+		Assert.assertTrue(search.isDisplayed());
 		this.homePage.enterCity("Agra");
 		List<WebElement> company = driver.findElements(By.xpath("//*[@id='forecast_list_ul']/table/tbody/tr/td[2]"));
 		if(company.size()>0)

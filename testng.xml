@@ -4,6 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="org.openweathermap.HomeSanityTest"/>
+      <class name="org.openweathermap.InvalidCityTest"/>
+      <class name="org.openweathermap.ValidCityTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

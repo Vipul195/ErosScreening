@@ -1,7 +1,5 @@
 package org.openweathermap;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -23,6 +21,7 @@ private HomePage homePage = null;
 		this.homePage = new HomePage(this.driver);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Your city name']")));
+		Assert.assertTrue(search.isDisplayed());
 		Assert.assertTrue(this.homePage.enterCity("ABC"));
 		String s1 = driver.findElement(By.xpath("//div[@class='alert alert-warning']")).getText();
 		if(s1.equalsIgnoreCase("Not Found"))
